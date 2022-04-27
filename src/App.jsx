@@ -2,6 +2,9 @@ import { useState } from 'react'
 import styled from '@emotion/styled';
 
 import ImagenCripto from './img/imagen-criptos.png'
+import ImagenCripto2 from './img/img2.jpg'
+import ImagenCripto3 from './img/img3.webp'
+import Formulario from './components/Formulario';
 
 const Container = styled.div`
   max-width: 900px;
@@ -15,10 +18,12 @@ const Container = styled.div`
   }
 `
  const Imagen = styled.img`
-   max-width: 400px;
+   max-width: 500px;
    width: 80%;
    margin: 100px auto 0 auto;
    display: block;
+   border-radius: 5px;
+   height: 500px;
  `
 
  const Heading = styled.h1`
@@ -50,7 +55,8 @@ function App() {
       />
 
       <div>
-        <Heading>Cotizador Criptomonedas React </Heading>
+        <Heading> Cotizador de Criptomonedas React JS </Heading>
+        <Formulario />
       </div>
       
 
