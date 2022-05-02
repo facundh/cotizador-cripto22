@@ -4,7 +4,7 @@ import styled from "@emotion/styled";
 const Label = styled.label`
   color: white;
   display: block;
-  font-size: 30px;
+  font-size: 20px;
   text-align: center;
   margin-bottom: 10px;
   font-weight: 600;
@@ -18,7 +18,7 @@ const Select = styled.select`
   margin-bottom: 10px;
   border-radius:20px;
   text-align: center;
-  font-size: 20px;
+  font-size: 15px;
   color: black;
 `
 

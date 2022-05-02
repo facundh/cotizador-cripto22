@@ -14,10 +14,10 @@ const InputSubmit = styled.input`
   padding: 10px;
   border-radius: 10px;
   text-transform: uppercase;
-  margin-top: 20px;
+  margin-top: 10px;
   font-weight: 700;
   color: white;
-  font-size: 20px;
+  font-size: 15px;
   &:hover {
     background-color: #3b9ea5;
     transition: 1s ease-in-out;

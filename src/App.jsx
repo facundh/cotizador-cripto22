@@ -4,6 +4,7 @@ import styled from "@emotion/styled";
 import ImagenCripto from "./img/imagen-criptos.png";
 
 import Formulario from "./components/Formulario";
+import Cotizacion from "./components/Cotizacion";
 
 const Container = styled.div`
   max-width: 900px;
@@ -29,9 +30,9 @@ const Heading = styled.h1`
   text-transform: uppercase;
   text-align: center;
   margin-top: 120px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-weight: 700;
-  font-size: 35px;
+  font-size: 30px;
   ::after {
     content: "";
     width: 100px;
@@ -68,6 +69,7 @@ function App() {
       <div>
         <Heading> Cotizador de Criptomonedas React JS </Heading>
         <Formulario setMonedas={setMonedas} />
+        {cotizacion.PRICE && <Cotizacion cotizacion={cotizacion}/>}
       </div>
     </Container>
   );
