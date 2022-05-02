@@ -17,7 +17,7 @@ const InputSubmit = styled.input`
   margin-top: 10px;
   font-weight: 700;
   color: white;
-  font-size: 15px;
+  font-size: 14px;
   &:hover {
     background-color: #3b9ea5;
     transition: 1s ease-in-out;

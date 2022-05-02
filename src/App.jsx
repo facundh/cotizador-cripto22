@@ -5,6 +5,7 @@ import ImagenCripto from "./img/imagen-criptos.png";
 
 import Formulario from "./components/Formulario";
 import Cotizacion from "./components/Cotizacion";
+import Spinner from "./components/Spinner";
 
 const Container = styled.div`
   max-width: 900px;
@@ -46,21 +47,25 @@ const Heading = styled.h1`
 function App() {
   const [monedas, setMonedas] = useState({});
   const [cotizacion, setCotizacion] = useState({});
+  const [cargando, setCargando] = useState(false);
 
-  useEffect(()=> {
-    if(Object.keys(monedas).length > 0){
-      const {moneda, criptomoneda} = monedas;
+  useEffect(() => {
+    if (Object.keys(monedas).length > 0) {
+      const { moneda, criptomoneda } = monedas;
 
       const cotizarMonedas = async () => {
-        const url = `https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${criptomoneda}&tsyms=${moneda}`
+        setCargando(true);
+        setCotizacion({});
+        const url = `https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${criptomoneda}&tsyms=${moneda}`;
         const respuesta = await fetch(url);
         const resultado = await respuesta.json();
 
         setCotizacion(resultado.DISPLAY[criptomoneda][moneda]);
-      }
+        setCargando(false);
+      };
       cotizarMonedas();
     }
-  },[monedas])
+  }, [monedas]);
 
   return (
     <Container>
@@ -69,7 +74,11 @@ function App() {
       <div>
         <Heading> Cotizador de Criptomonedas React JS </Heading>
         <Formulario setMonedas={setMonedas} />
-        {cotizacion.PRICE && <Cotizacion cotizacion={cotizacion}/>}
+        {cargando ? (
+          <Spinner />
+        ) : (
+          cotizacion.PRICE && <Cotizacion cotizacion={cotizacion} />
+        )}
       </div>
     </Container>
   );

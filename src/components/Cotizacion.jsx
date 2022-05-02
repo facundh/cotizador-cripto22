@@ -17,8 +17,8 @@ const Contenedor = styled.div`
 
 const Imagen = styled.img`
     display: block;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
 `
 const Texto = styled.p`
   font-size: 15px;
