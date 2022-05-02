@@ -19,6 +19,7 @@ const Select = styled.select`
   border-radius:20px;
   text-align: center;
   font-size: 20px;
+  color: black;
 `
 
 const useSelectCurrents = (label, options) => {
@@ -38,6 +39,8 @@ const useSelectCurrents = (label, options) => {
           </option>
         ))}
       </Select>
+      
+     
     </>
   );
 
