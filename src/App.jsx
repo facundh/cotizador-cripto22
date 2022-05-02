@@ -56,12 +56,15 @@ function App() {
       const cotizarMonedas = async () => {
         setCargando(true);
         setCotizacion({});
-        const url = `https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${criptomoneda}&tsyms=${moneda}`;
-        const respuesta = await fetch(url);
-        const resultado = await respuesta.json();
-
-        setCotizacion(resultado.DISPLAY[criptomoneda][moneda]);
-        setCargando(false);
+        setTimeout(async() => {
+          
+          const url = `https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${criptomoneda}&tsyms=${moneda}`;
+          const respuesta = await fetch(url);
+          const resultado = await respuesta.json();
+  
+          setCotizacion(resultado.DISPLAY[criptomoneda][moneda]);
+          setCargando(false);
+        }, 1000);
       };
       cotizarMonedas();
     }
