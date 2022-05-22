@@ -7,7 +7,7 @@ Cotización de las diez criptomonedas mas importantes al instante
 Spinner del loading de la cotizacion
 ![image](https://user-images.githubusercontent.com/90207514/166329824-7c086cad-4873-42af-a733-af6bd02f580f.png)
 
-Verifica qeu todos los campos esten debidamente completados
+Verifica que todos los campos esten debidamente completados
 ![image](https://user-images.githubusercontent.com/90207514/166329871-83cb2797-8b98-4a56-878c-0b9cf2e1a189.png)
 
 
